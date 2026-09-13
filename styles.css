@@ -4,8 +4,8 @@ Clean, modern, light theme, single accent color, responsive
 ========================================================== */
 
 :root {
-   --bg: #f9fafb;
-   --bg-alt: #eef2f6;
+   --bg: #eceef1;
+   --bg-alt: #e4e7ec;
    --card-bg: #ffffff;
    --text: #12141a;
    --text-muted: #4b5563;
@@ -60,7 +60,7 @@ h1, h2, h3 {
    position: sticky;
    top: 0;
    z-index: 10;
-   background-color: rgba(249, 250, 251, 0.9);
+   background-color: rgba(236, 238, 241, 0.9);
    backdrop-filter: blur(8px);
    border-bottom: 1px solid var(--border);
 }
