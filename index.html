@@ -46,31 +46,31 @@
             <article class="card">
               <h3>JARVIS Mission Control Dashboard</h3>
               <p class="card-label">Problem</p>
-            <p>[FILL IN: what specific visibility/tracking problem existed before this dashboard — e.g. no central view of agent status, tasks, and revenue pipeline across the business]</p>
+            <p>Ten AI agents were running across 37 active automation workflows, but their state lived in three unconnected places: the automation platform, a Postgres database, and a Telegram chat. Answering "which agents are live, what is assigned, and what has this cost" meant opening three tools and reconciling them by hand.</p>
             <p class="card-label">What I built</p>
-            <p>A custom Obsidian plugin (JARVIS Mission Control) built through sequential AI-assisted development prompts, providing a live dashboard for agent status, task assignment, and a revenue/pipeline overview, integrated with n8n workflows.</p>
+            <p>A custom Obsidian plugin in TypeScript that puts the whole operation in one sidebar: agent roster with live status, task assignment straight to any agent, a 30-day revenue and spend overview, and one-click buttons that fire automation workflows. Each panel loads independently, so one failing data source degrades a single card instead of blanking the dashboard. It authenticates with a purpose-built least-privilege database role — read on three tables, write on one, deletes refused at the database — rather than the all-access key this kind of tool usually ships with.</p>
             <p class="card-label">Measurable result</p>
-              <p>[FILL IN: quantifiable outcome — e.g. hours saved per week on manual status checks, number of workflows now tracked in one place, time-to-visibility improvement]</p>
+              <p>[NEEDS JESSE: the dashboard is built and its data paths are verified, but it is not installed in the vault yet, so there is no usage data. Verifiable scope figures available now: 10 agents and 37 active workflows consolidated into one view, replacing a 3-tool manual check. A time-saved claim needs a real number from you once you have used it for a week.]</p>
             </article>
 
             <article class="card">
             <h3>GoHighLevel Workflow Build</h3>
               <p class="card-label">Problem</p>
-              <p>[FILL IN: the client/business problem this GoHighLevel workflow solved — e.g. leads going cold due to slow follow-up, manual appointment booking]</p>
+              <p>[NEEDS JESSE — see note below. The GoHighLevel work on this server is an integration layer built ahead of need, with placeholder credentials. It has never been connected to a live GoHighLevel account and no client has used it, so there is no real business problem I can describe here without inventing one. If you have GoHighLevel client work from elsewhere, send me the details and I will write this properly.]</p>
               <p class="card-label">What I built</p>
-            <p>[FILL IN: describe the specific GoHighLevel automation — e.g. a multi-step nurture sequence, appointment booking funnel, or SMS/email follow-up workflow]</p>
+            <p>A provider-agnostic CRM sync layer with interchangeable GoHighLevel and HubSpot adapters, so a business can switch CRM without touching the calling code. Built against the GoHighLevel LeadConnector API: token auth with the required version header, contact upsert, and email/phone normalisation to E.164 before send. Credentials live in a locked-down table with default-deny access, and the code detects a missing credential and skips cleanly instead of breaking the call flow around it.</p>
             <p class="card-label">Measurable result</p>
-            <p>[FILL IN: quantifiable outcome — e.g. % increase in booked appointments, response time reduction, lead conversion lift]</p>
+            <p>[NEEDS JESSE — no outcome exists to report. This has never run against a live GoHighLevel account, so any conversion or booking figure here would be fabricated. Options: (a) send me real GoHighLevel client work and I will replace this card, (b) keep it but retitle to an integration case study with no metrics claim, or (c) drop the card until there is live work.]</p>
           </article>
 
             <article class="card">
               <h3>n8n Automation Pipeline</h3>
               <p class="card-label">Problem</p>
-              <p>[FILL IN: the operational bottleneck this pipeline addressed — e.g. manual data entry between disconnected tools, slow lead routing]</p>
+              <p>Sourcing qualified trucking-carrier leads meant querying a federal registry by hand, stripping out carriers that did not fit, checking each one against records already contacted, and writing an individual pitch. It was several hours of repetitive work for a list that went stale within days.</p>
               <p class="card-label">What I built</p>
-            <p>An end-to-end n8n automation pipeline connecting multiple tools and APIs to move data and trigger actions automatically, removing manual handoffs between systems.</p>
+            <p>A 12-stage n8n pipeline that runs unattended every morning: it queries the federal carrier registry, filters to the target profile, scores each carrier for fit with an AI model and drafts a tailored opening line, removes anyone already in the database, writes the result to Postgres, and posts a digest to Telegram. Full execution tracing is wired in, so a bad run is visible rather than silent.</p>
               <p class="card-label">Measurable result</p>
-            <p>[FILL IN: quantifiable outcome — e.g. number of hours of manual work eliminated per week, error rate reduction, processing time improvement]</p>
+            <p>12,845 qualified leads generated across 96 days of unattended operation — 97% with a phone number, 99% with an email. Roughly 15 new scored leads land every morning with zero manual steps, and every run in the retained execution window completed successfully.</p>
           </article>
 
         </div>
