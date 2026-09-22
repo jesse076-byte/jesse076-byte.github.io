@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jesse Escolastico — AI Automation Specialist & Virtual Assistant</title>
   <meta name="description" content="Jesse Escolastico — AI Automation Specialist & Virtual Assistant. n8n, GoHighLevel, and AI Agent Workflows.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232f7ede'/%3E%3Ctext x='32' y='44' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jesse Escolastico — AI Automation Specialist & Virtual Assistant">
+  <meta property="og:description" content="n8n, GoHighLevel, and AI Agent Workflows — self-hosted automation systems for customer service, lead generation, and business operations.">
+  <meta property="og:url" content="https://jesse076-byte.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jesse Escolastico — AI Automation Specialist & Virtual Assistant">
+  <meta name="twitter:description" content="n8n, GoHighLevel, and AI Agent Workflows — self-hosted automation systems for customer service, lead generation, and business operations.">
   <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -54,13 +62,14 @@
             </article>
 
             <article class="card">
-            <h3>GoHighLevel Workflow Build</h3>
+            <h3>GoHighLevel CRM Setup &mdash; Internal Tooling</h3>
               <p class="card-label">Problem</p>
-              <p>[NEEDS JESSE — see note below. The GoHighLevel work on this server is an integration layer built ahead of need, with placeholder credentials. It has never been connected to a live GoHighLevel account and no client has used it, so there is no real business problem I can describe here without inventing one. If you have GoHighLevel client work from elsewhere, send me the details and I will write this properly.]</p>
+              <p>Outbound lead tracking for two of my own early-stage businesses &mdash; Vera BPO (an AI answering service) and Cobalt Media Co (an SMMA) &mdash; was spread across scattered notes. Outreach ran through several contact channels at once, and there was no reliable way to see who had already been contacted, which channel they were reached on, or who had actually replied. Leads were being lost to bookkeeping rather than to disinterest.</p>
               <p class="card-label">What I built</p>
-            <p>A provider-agnostic CRM sync layer with interchangeable GoHighLevel and HubSpot adapters, so a business can switch CRM without touching the calling code. Built against the GoHighLevel LeadConnector API: token auth with the required version header, contact upsert, and email/phone normalisation to E.164 before send. Credentials live in a locked-down table with default-deny access, and the code detects a missing credential and skips cleanly instead of breaking the call flow around it.</p>
+            <p>Set up GoHighLevel as the CRM of record for both businesses, tracking leads and clients from first outreach through to reply, with a dedicated sales pipeline for Cobalt Media Co. Outreach is logged per channel, so a lead’s history &mdash; contacted where, when, and whether they responded &mdash; sits in one place instead of across notes.</p>
+            <p>Separately, and deliberately not yet pointed at that workspace, I wrote a provider-agnostic CRM sync layer with interchangeable GoHighLevel and HubSpot adapters, so a business can switch CRM without touching the calling code. Built against the GoHighLevel LeadConnector API: token auth with the required version header, contact upsert, and email/phone normalisation to E.164 before send. Credentials live in a locked-down table with default-deny access, and the code detects a missing credential and skips cleanly instead of breaking the call flow around it. It runs on placeholder credentials today and has never been connected to a live GoHighLevel account.</p>
             <p class="card-label">Measurable result</p>
-            <p>[NEEDS JESSE — no outcome exists to report. This has never run against a live GoHighLevel account, so any conversion or booking figure here would be fabricated. Options: (a) send me real GoHighLevel client work and I will replace this card, (b) keep it but retitle to an integration case study with no metrics claim, or (c) drop the card until there is live work.]</p>
+            <p>No metrics yet, and none are claimed. This is internal tooling for two businesses still in their early stages, not a completed client engagement &mdash; both are pre-revenue, so any conversion, booking or retention figure would be meaningless. What changed is operational: lead status is now a lookup rather than a reconstruction. Evidence here is a written description only; screenshots and any real numbers will follow once the businesses are properly launched.</p>
           </article>
 
             <article class="card">
@@ -73,16 +82,6 @@
             <p>12,845 qualified leads generated across 96 days of unattended operation — 97% with a phone number, 99% with an email. Roughly 15 new scored leads land every morning with zero manual steps, and every run in the retained execution window completed successfully.</p>
           </article>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Workflow Demo Placeholder -->
-    <section class="workflow-demo">
-      <div class="container">
-        <h2>Interactive Workflow Demo</h2>
-        <div id="workflow-diagram" class="workflow-diagram-placeholder">
-          <p>[FILL IN: clickable workflow diagram demo coming soon]</p>
         </div>
       </div>
     </section>
