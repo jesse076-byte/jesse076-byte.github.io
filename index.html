@@ -86,6 +86,50 @@
       </div>
     </section>
 
+    <!-- Real Pipeline Demo -->
+    <section id="pipeline-demo" class="pipeline-demo">
+      <div class="container">
+        <h2>How the Lead-Gen Pipeline Actually Works</h2>
+        <p class="pipeline-intro">This is the actual architecture behind my n8n lead-generation pipeline &mdash; not a mockup. Click through each stage to see what it really does.</p>
+
+        <div class="pipeline-steps">
+          <button class="pipeline-step active" type="button" data-step="0" aria-pressed="true">
+            <span class="step-num">1</span>
+            <span class="step-label">Scheduled Trigger</span>
+          </button>
+          <button class="pipeline-step" type="button" data-step="1" aria-pressed="false">
+            <span class="step-num">2</span>
+            <span class="step-label">Source: FMCSA Registry</span>
+          </button>
+          <button class="pipeline-step" type="button" data-step="2" aria-pressed="false">
+            <span class="step-num">3</span>
+            <span class="step-label">Filter &amp; Clean</span>
+          </button>
+          <button class="pipeline-step" type="button" data-step="3" aria-pressed="false">
+            <span class="step-num">4</span>
+            <span class="step-label">Validate</span>
+          </button>
+          <button class="pipeline-step" type="button" data-step="4" aria-pressed="false">
+            <span class="step-num">5</span>
+            <span class="step-label">AI Scoring &amp; Pitch</span>
+          </button>
+          <button class="pipeline-step" type="button" data-step="5" aria-pressed="false">
+            <span class="step-num">6</span>
+            <span class="step-label">Log &amp; Notify</span>
+          </button>
+        </div>
+
+        <div class="pipeline-detail-panel" aria-live="polite">
+          <p id="pipeline-detail-text">Runs automatically every morning at 9&nbsp;AM &mdash; no manual step, no one has to remember to start it.</p>
+        </div>
+
+        <p class="pipeline-stats">
+          Active production pipeline &middot; ~15 verified leads/day (hits its configured daily cap) &middot; 97% phone / 98% email complete &middot; zero missed or failed runs in the last 10 days
+          <span class="pipeline-stats-note">Pulled directly from the database and execution history behind this exact workflow, as of September 22, 2026.</span>
+        </p>
+      </div>
+    </section>
+
     <!-- Contact / CTA Section -->
     <section id="contact" class="contact-cta">
       <div class="container">
