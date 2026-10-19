@@ -52,6 +52,45 @@
           <div class="card-grid">
 
             <article class="card">
+              <h3>Real-Time Freelance Job Alert System</h3>
+              <p class="card-label">Problem</p>
+              <p>On freelance marketplaces the first proposals win, but new job posts reached me about an hour and a half after they went live. By then many already had dozens of bids, and some had been closed or filled.</p>
+              <p class="card-label">What I built</p>
+              <p>An automation that checks several job boards and email job alerts every 15 minutes and sends each new match to my phone through Telegram, with the title, budget and a direct link. Right before an alert goes out, it opens the job again to confirm it is still open, so I never chase a post that has already closed.</p>
+              <p class="card-label">Tools</p>
+              <ul class="tool-list"><li>n8n</li><li>Telegram</li><li>Gmail</li><li>Job-board feeds</li></ul>
+              <p class="card-label">Result</p>
+              <p>Alert delay cut from about 1.5 hours to 15 minutes, and closed or expired jobs are filtered out before they reach me.</p>
+              <p class="loom-slot"><!-- LOOM: replace this line with <a href="https://www.loom.com/share/...">Watch the walkthrough</a> -->Video walkthrough (Loom): coming soon</p>
+            </article>
+
+            <article class="card">
+              <h3>Lead Scoring Pipeline</h3>
+              <p class="card-label">Problem</p>
+              <p>The job scanner found hundreds of posts a week, but most were not a good fit. Reading each one to decide was slow, and the strong matches got buried in the noise.</p>
+              <p class="card-label">What I built</p>
+              <p>A scoring step inside the job scanner: an AI model rates every post from 0 to 10 against my skills, rates and languages (English and Spanish) and writes a one-line reason. Only high scores trigger an alert; every score is saved, so the rules can be tuned against real results.</p>
+              <p class="card-label">Tools</p>
+              <ul class="tool-list"><li>n8n</li><li>Claude (AI scoring)</li><li>PostgreSQL</li><li>Telegram</li></ul>
+              <p class="card-label">Result</p>
+              <p>Qualified matches up from 46 to 82 per week, with each one arriving already explained.</p>
+              <p class="loom-slot"><!-- LOOM: replace this line with <a href="https://www.loom.com/share/...">Watch the walkthrough</a> -->Video walkthrough (Loom): coming soon</p>
+            </article>
+
+            <article class="card">
+              <h3>JARVIS &mdash; AI Operations Assistant</h3>
+              <p class="card-label">Problem</p>
+              <p>Running several small businesses meant jumping between chat, email, a task list and two computers just to get routine work done, and things slipped through the gaps.</p>
+              <p class="card-label">What I built</p>
+              <p>A Telegram assistant that takes text or voice requests, keeps the task list, hands work to specialist AI agents for research, drafting and lead work, and replies in the same chat. A companion desktop app carries out approved tasks on two Windows PCs &mdash; browser, files and apps &mdash; and asks for a tap on my phone before anything is sent to anyone.</p>
+              <p class="card-label">Tools</p>
+              <ul class="tool-list"><li>Telegram</li><li>Node.js</li><li>Electron</li><li>n8n</li><li>Claude</li><li>PostgreSQL</li></ul>
+              <p class="card-label">Result</p>
+              <p>Day-to-day work runs from one chat: tasks, research, drafts and actions across 2 PCs, with every outgoing action approved by phone first.</p>
+              <p class="loom-slot"><!-- LOOM: replace this line with <a href="https://www.loom.com/share/...">Watch the walkthrough</a> -->Video walkthrough (Loom): coming soon</p>
+            </article>
+
+            <article class="card">
               <h3>JARVIS Mission Control Dashboard</h3>
               <p class="card-label">Problem</p>
             <p>Ten AI agents were running across 37 active automation workflows, but their state lived in three unconnected places: the automation platform, a Postgres database, and a Telegram chat. Answering "which agents are live, what is assigned, and what has this cost" meant opening three tools and reconciling them by hand.</p>
